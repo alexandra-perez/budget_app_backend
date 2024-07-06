@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const { id } = req.params;
   const transactionIndex = transactions.findIndex(
-    (transaction) => transaction.id === Number(id)
+    transaction => transaction.id === Number(id)
   );
   if (transactionIndex !== -1) {
     res.status(200).send(transactions[transactionIndex]);
@@ -35,7 +35,23 @@ router.delete('/:id', (req, res) => {
   );
   if (transactionIndex !== -1) {
     transactions.splice(transactionIndex, 1);
-    res.status(200).send(transactions)
+    res.status(200).send(transactions);
+  } else {
+    res.status(404).json(`Cannot find transaction with id ${id}`);
+  }
+});
+
+// Update a transaction
+router.put('/:id', (req, res) => {
+  const { id } = req.params;
+  const transactionIndex = transactions.findIndex(
+    (transaction) => transaction.id === Number(id)
+  );
+  if (transactionIndex !== -1) {
+    transactions[transactionIndex] = req.body;
+    res.status(200).send(transactions[transactionIndex]);
+  } else {
+    res.status(404).json(`Cannot find transaction with id ${id}`);
   }
 });
 
