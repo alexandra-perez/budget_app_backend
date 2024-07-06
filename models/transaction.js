@@ -1,26 +1,26 @@
 module.exports = [
   {
-    id: 'a1b2',
+    id: 1,
     item_name: 'Groceries',
     amount: 150.25,
     date: '2024-07-01',
-    from: 'Supermarket',
+    from: 'Whole Foods',
     category: 'Food',
   },
   {
-    id: 'c3d4',
+    id: 2,
     item_name: 'Electricity Bill',
     amount: 75.5,
     date: '2024-07-05',
-    from: 'Utility Company',
+    from: 'Con Edison',
     category: 'Utilities',
   },
   {
-    id: 'e5f6',
+    id: 3,
     item_name: 'Gym Membership',
     amount: 40.0,
     date: '2024-07-10',
-    from: 'Fitness Center',
+    from: 'Planet Fitness',
     category: 'Health',
-  },
+  }
 ];
