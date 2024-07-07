@@ -4,15 +4,15 @@ module.exports = [
     item_name: 'Groceries',
     amount: 150.25,
     date: '2024-07-01',
-    from: 'Whole Foods',
-    category: 'Food',
+    from: 'Fresh Mart',
+    category: 'Groceries',
   },
   {
     id: 2,
     item_name: 'Electricity Bill',
     amount: 75.5,
     date: '2024-07-05',
-    from: 'Con Edison',
+    from: 'PowerGrid Corp',
     category: 'Utilities',
   },
   {
@@ -20,7 +20,7 @@ module.exports = [
     item_name: 'Gym Membership',
     amount: 40.0,
     date: '2024-07-10',
-    from: 'Planet Fitness',
-    category: 'Health',
-  }
+    from: 'FitHub',
+    category: 'Healthcare',
+  },
 ];
